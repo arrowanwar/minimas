@@ -20,7 +20,7 @@ class app {
             $this->controller = strtolower($url[0]);
             unset($url[0]);
         }
-        require "../app/contollers/". $this->controller.".php";
+        require '../controllers/'.$this->controller.'.php';
         $this->controller = new $this->controller;
         if(isset($url[1])){
             if(method_exists($this->controller, $url[1])){
