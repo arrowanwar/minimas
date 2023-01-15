@@ -31,10 +31,11 @@ class app {
                 unset($url[1]);
             }
         }
-        show($url);
+        $this->param =  array_values($url);
+        call_user_func_array([$this->controller, $this->method], $this->param);
     }
     private function splitURL() {
-        return explode("/", trim($_GET['url'],"/"));
+        return explode("/", filter_var(trim($_GET['url'],"/"), FILTER_SANITIZE_URL));
     }
 
 }
