@@ -35,6 +35,7 @@ class app {
         call_user_func_array([$this->controller, $this->method], $this->param);
     }
     private function splitURL() {
+//        $url = isset($_GET['url'])?$_GET['url'] : "home";
         return explode("/", filter_var(trim($_GET['url'],"/"), FILTER_SANITIZE_URL));
     }
 
