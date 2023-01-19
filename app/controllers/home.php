@@ -13,7 +13,7 @@
 class home {
     function index()
     {
-        $this->view("home");
+        $this->view("about");
     }
     function view($view){
          if(file_exists("../app/views/".$view.".php")){

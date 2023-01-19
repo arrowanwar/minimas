@@ -21,6 +21,7 @@ class app {
             unset($url[0]);
             show($url);
         } else {
+            show($url);
             echo 'not';
         }
         require "../app/controllers/".$this->controller.".php";
