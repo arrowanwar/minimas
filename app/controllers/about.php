@@ -1,3 +1,5 @@
+
+<?pho
 class about {
     function index()
     {
@@ -11,3 +13,4 @@ class about {
         }
     }
 }
+?>
